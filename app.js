@@ -40,10 +40,6 @@ app.get("/compose", (req, res) => {
     res.render("compose");
 });
 
-// POST ROUTES
-app.post('/compose', (req, res) => {
-    console.log(req.body);
-});
 
 // LISTINING TO PORT
 app.listen(port, function () {

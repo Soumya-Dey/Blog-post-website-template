@@ -7,7 +7,7 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 
 <body>
@@ -16,20 +16,9 @@
 
     <div class="container">
         <h1>Compose</h1>
-
-        <form action="/compose" method="post">
-            <div class="form-group">
-                <label for="postTitle">Post title</label>
-                <input type="text" name="postTitle" class="form-control" id="postTitle" placeholder="Add post title...">
-            </div>
-
-            <div class="form-group">
-                <label for="postContent">Post content</label>
-                <textarea name="postContent" class="form-control" id="postContent" placeholder="Add post content..." 
-                    rows="6"></textarea>
-            </div>
-
-            <button type="submit" name="publishBtn" class="btn btn-dark">Publish</button>
+        <form action="/" method="post">
+            <input type="text" name="blogText" id="" placeholder="Add new blog post...">
+            <button type="submit" name="publishBtn">Publish</button>
         </form>
     </div>
 
