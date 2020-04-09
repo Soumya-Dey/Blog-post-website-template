@@ -7,7 +7,7 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 
 <body>
@@ -17,6 +17,11 @@
     <div class="container">
         <h1>Home</h1>
         <p> <%= homeContent %> </p>
+
+        <% postsArr.forEach(post => { %>
+        <h2> <%= post.title %> </h2>
+        <p> <%= post.content %> </p>
+        <% }) %>
     </div>
 
     <%- include('partials/footer') %>
