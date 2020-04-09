@@ -1,5 +1,6 @@
 const express = require("express");
 const ejs = require("ejs");
+const lodash = require("lodash");
 
 // GLOBAL VARIABLES
 const app = express();
@@ -40,6 +41,19 @@ app.get("/contact", (req, res) => {
 
 app.get("/compose", (req, res) => {
     res.render("compose");
+});
+
+app.get("/posts/:postId", (req, res) => {
+    const reqPostId = lodash.lowerCase(req.params.postId);
+
+    posts.forEach((post) => {
+        if (lodash.lowerCase(post.title) === reqPostId) {
+            res.render("post", {
+                title: post.title,
+                content: post.content,
+            });
+        }
+    });
 });
 
 // POST ROUTES
