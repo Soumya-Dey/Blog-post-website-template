@@ -15,8 +15,15 @@
     <%- include('partials/header') %>
 
     <div class="container container-fluid">
-        <h1> <%= title %>  </h1>
-        <p> <%= content %> </p>
+        <div class="title_cont">
+            <h1> <%= post.title %> </h1>
+
+            <form class="delete_form" action="/delete" method="post">
+                <button class="btn btn-sm btn-danger publish-btn" name='deleteBtn' value="<%= post._id %>" type="submit">Delete post</button>
+            </form>
+        </div>
+        <p> <%= post.content %> </p>
+        <hr>
     </div>
 
     <%- include('partials/footer') %>

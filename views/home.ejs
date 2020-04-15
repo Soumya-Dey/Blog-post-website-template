@@ -3,9 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Daily Journal</title>
+    <title>Journal</title>
     <meta charset="utf-8">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
@@ -15,12 +19,16 @@
     <%- include('partials/header') %>
 
     <div class="container container-fluid">
-        <h1>Home</h1>
-        <p> <%= homeContent %> </p>
+        <div class="home_content">
+            <h1>Home</h1>
+            <p> <%= homeContent %> </p>
+        </div>
+        <hr>
 
         <% postsArr.forEach(post => { %>
         <h2> <%= post.title %> </h2>
-        <p> <%= post.content.substring(0, 100) + ' ...' %> <a class="read-more-link" href="/posts/<%= post.title %>">read more</a> </p>
+        <p> <%= post.content.substring(0, 100) + ' ...' %> <a class="read-more-link" href="/posts/<%= post._id %>">read
+                more</a> </p>
         <% }) %>
     </div>
 
